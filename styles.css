@@ -12,22 +12,22 @@ body {
 }
 @keyframes slideshow {
     0% {
-      background-image: url("assets/bgimages/electronics.png");
+      background-image: url("assets/bg/electronics.webp");
     }
     20% {
-      background-image: url("assets/bgimages/civil.png");
+      background-image: url("assets/bg/civil.webp");
     }
     40% {
-        background-image: url("assets/bgimages/computer.png");
+        background-image: url("assets/bg/computer.webp");
       }
     60% {
-        background-image: url("assets/bgimages/mechanical.png");
+        background-image: url("assets/bg/mechanical.webp");
       }
       80% {
-        background-image: url("assets/bgimages/electrical.png");
+        background-image: url("assets/bg/electrical.webp");
       }
     100% {
-        background-image: url("assets/bgimages/auto.png");
+        background-image: url("assets/bg/auto.webp");
       }
   }
 

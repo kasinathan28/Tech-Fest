@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Preload background images
     var images = [
-        "assets/bgimages/auto.png",
-        "assets/bgimages/civil.png",
-        "assets/bgimages/computer.png",
-        "assets/bgimages/electrical.png",
-        "assets/bgimages/mechanical.png",
-        "assets/bgimages/electronics.png"
+        "assets/bg/auto.webp",
+        "assets/bg/civil.webp",
+        "assets/bg/computer.webp",
+        "assets/bg/electrical.webp",
+        "assets/bg/mechanical.webp",
+        "assets/bg/electronics.webp"
     ];
 
     images.forEach(function (image) {
