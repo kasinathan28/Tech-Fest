@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    .slider-container {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .slider {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+      flex: 0 0 200px;
+      box-sizing: border-box;
+      position: relative;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slider img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+    }
+
+    .dots-container {
+      text-align: center;
+      margin-top: 5px;
+     
+    }
+
+    .dot {
+      height: 10px;
+      width: 10px;
+      margin: 0 5px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.3s ease-in-out;
+      
+    }
+
+    .dot.active {
+      background-color: #555;
+    }
+
+    @media (max-width: 768px) {
+      .slide {
+        flex: 0 0 33.33%; /* Show 3 slides on mobile */
+      }
+    }
+
+    @media (min-width: 769px) {
+      .slide {
+        flex: 0 0 25%; /* Show 4 slides on larger screens */
+      }
+
+      .slider img {
+        max-width: 300px; /* Increase the image size for larger screens */
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="slider-container">
+  <div class="slider">
+    <!-- Repeat the images to create an infinite loop -->
+    <div class="slide"><img src="assets/slider/KSEB logo.png" alt="KSEB Logo"></div>
+    <div class="slide"><img src="assets/slider/ISRO Logo.png" alt="ISRO Logo"></div>
+    <div class="slide"><img src="assets/slider/Fire and Rescue Logo.png" alt="Fire and Rescue Logo"></div>
+    <div class="slide"><img src="assets/slider/KSEB logo copy.png" alt="KSEB Logo Copy"></div>
+    <div class="slide"><img src="assets/slider/Fire and Rescue Logo copy.png" alt="Fire and Rescue Logo Copy"></div>
+
+    <!-- Repeat the original set of images to create an infinite loop -->
+    <div class="slide"><img src="assets/slider/KSEB logo.png" alt="KSEB Logo"></div>
+    <div class="slide"><img src="assets/slider/ISRO Logo.png" alt="ISRO Logo"></div>
+    <div class="slide"><img src="assets/slider/Fire and Rescue Logo.png" alt="Fire and Rescue Logo"></div>
+    <div class="slide"><img src="assets/slider/KSEB logo copy.png" alt="KSEB Logo Copy"></div>
+    <div class="slide"><img src="assets/slider/Fire and Rescue Logo copy.png" alt="Fire and Rescue Logo Copy"></div>
+  </div>
+</div>
+
+<div class="dots-container">
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+</div>
+
+<script>
+  let currentIndex = 0;
+  const slidesContainer = document.querySelector('.slider');
+  const slides = document.querySelectorAll('.slide');
+  const dots = document.querySelectorAll('.dot');
+
+  function showSlide(index) {
+    currentIndex = index;
+    const translateValue = -index * 200 + 'px';
+    slidesContainer.style.transform = 'translateX(' + translateValue + ')';
+
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[currentIndex].classList.add('active');
+
+    slides.forEach((slide, i) => {
+      const distance = Math.abs(currentIndex - i);
+      const scaleFactor = 1 - (distance * 0.1);
+      const translateX = i < currentIndex ? '-50%' : (i > currentIndex ? '50%' : '0');
+
+      slide.style.transform = `scale(${scaleFactor}) translateX(${translateX})`;
+    });
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % (slides.length / 2);
+    showSlide(currentIndex);
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + slides.length / 2) % (slides.length / 2);
+    showSlide(currentIndex);
+  }
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => showSlide(index));
+  });
+
+  setInterval(nextSlide, 3000);
+</script>
+
+</body>
+</html>

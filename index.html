@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CARMEL TECHNICAL AND INNOVATION FEST</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Karla:wght@800&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@100&display=swap">
+
+  
+    </head>
+    <body>
+ 
+
+        <header>
+            <nav id="mainNav">
+                <a href="#"><img src="assets/logo/Carmel Logo.png" alt="Logo" id="logo"></a>
+                <button class="hamburger" onclick="toggleDropdown()">&#9776;</button>
+                <div class="overlay" id="myOverlay">
+                    <div class="overlay-content">
+                        <a href="#">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
+                
+            </nav>
+        </header>
+        
+    <main>
+        <section class="intro">
+            <div>
+                <img src="assets/logo/Carmtif Logo.webp" alt="CAMFIT" id="clogo">
+            </div>
+            <div class="event-details">
+                <p>Welcome to Carmel Tech Fest,</p>
+                <p>where innovation ideas come to life!</p>
+            </div>
+        </section>
+        <div class="countdown-container">
+            <section class="countdown" id="countdown-section">
+                
+                <div id="countdown">
+                    <span id="days"></span>
+                    <span class="countdown-separator"></span>
+                    <span id="hours"> </span>
+                    <span class="countdown-separator"></span>
+                    <span id="minutes"></span>
+                </div>
+                <div id="countdown1">
+                    <p  class="d">DAYS</p> 
+                    <p class="h">HOURS</p>
+                    <p  class="m">MINUTES</p>
+                </div>
+            </section>
+        </div>
+    
+        <script src="script.js"></script>
+        
+        
+        <section class="buttons">
+            <a href="pages/registration.html">
+                <button class="primary primary-tech">TECH FEST EVENTS</button>
+            </a>
+            
+            <a href="https://techfest-result.vercel.app/">
+                <button class="primary primary-lucky">LUCKY DRAW RESULT</button>
+            </a>
+        </section>
+        
+        <section class="about" id = "about">
+            <h2>ABOUT CARMTIF</h2>
+            <p>CARMEL Technical and Innovation Fest (CARMTIF) is not just an event; it's a grand celebration of technological prowess and inventive spirit. Nestled within the vibrant walls of Carmel Polytechnic College Alappuzha, CARMTIF beckons students from every engineering discipline to unveil their groundbreaking ideas and projects. This dynamic platform converges creativity, technology, and sustainability, fostering an environment where brilliant minds converge to shape the future of engineering excellence.
+                 Join us in this extraordinary journey where innovation knows no bounds, 
+                 and together, we inspire the realms of technological brilliance.</p>
+    
+            <h2>EXHIBITIONS</h2>
+            <iframe src="slider1.html" width="100%" height="180" frameborder="0" scrolling="no" id="responsive-iframe">
+            </iframe>
+            
+         </section>
+
+         <iframe src="components/footer.html" width="100%" height="500" frameborder="0" scrolling="no"></iframe>
+     
+
+        
+    </main>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro Screen</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            overflow: hidden;
+        }
+
+        #image-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        img {
+            width: 100%;
+            max-width: 640px; /* Adjust the max-width as needed */
+            height: auto;
+            object-fit: cover;
+        }
+
+        /* Apply different styles for mobile screens */
+        @media only screen and (max-width: 767px) {
+            #image-container {
+                height: 600px; /* Set your fixed height for mobile screens */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="image-container">
+        <img id="introImage" src="../assets/intro/Comp 1.gif" alt="Intro GIF">
+    </div>
+
+    <script>
+        const image = document.getElementById('introImage');
+
+        // Set a timeout for 4 seconds and then redirect to index.html
+        setTimeout(function () {
+            window.location.href = '../index.html';
+        }, 4000);
+    </script>
+</body>
+</html>

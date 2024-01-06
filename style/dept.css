@@ -1,0 +1,350 @@
+body {
+  margin: 0;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-image: url("../assets/bg/auto.webp");
+  background-attachment: fixed;
+  object-fit: cover;
+}
+
+nav {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: white;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  top: 0;
+  padding-top: 20px;
+}
+
+.bar {
+  width: 1.5px;
+  background: #fff;
+  height: 70px;
+  margin: 10px;
+}
+
+nav .carmtif-logo {
+  width: 180px;
+  height: auto;
+  margin-left: 10px;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+nav .carmel-logo {
+  width: 180px;
+  height: auto;
+  margin-left: 50px;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.back-button {
+  background-color: #fff;
+  color: #33014a;
+  border: none;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #33014a;
+  color: white;
+}
+
+.main {
+  width: 100%;
+  text-wrap: balance;
+  height: 200px;
+  /* margin: 130px auto; */
+  color: #fff;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 0;
+}
+.dept-logo {
+  width: 100px;
+  justify-content: center;
+  margin: auto;
+}
+.card-container {
+  width: 85%;
+  justify-content: center;
+  margin: auto;
+  height: auto;
+  padding: 20px;
+  padding-bottom: 50px;
+  margin-bottom: 30px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.card {
+  width: 48%;
+  text-align: center;
+  height: 250px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+
+
+
+
+
+.card-body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+.gallery {
+  width: 35%;
+  margin: 10px;
+  height: 90%;
+  float: left;
+  left: 0;
+  border-radius: 20px;
+  background: #33014a;
+  box-shadow: 0 4px 8px #000000;
+  overflow: hidden;
+  transition: 0.3s ease all;
+}
+
+.gallery img {
+  object-fit: cover;
+  width: 100%; /* Adjusted to make the image fill the container */
+  height: 100%; /* Adjusted to make the image fill the container */
+}
+
+.name {
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+  margin-left: 30px;
+}
+
+.info {
+  width: 60%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-right: 10px;
+  top: 0;
+  right: 0;
+  text-align: left;
+  border-radius: 20px;
+  bottom: -100%;
+  position: absolute;
+  transition: 0.3s ease;
+  opacity: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 15px;
+  margin: 0;
+}
+
+li {
+  padding: 10px;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.register-btn {
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  height: 20px;
+  width: 20%;
+  background-color: #fff;
+  color: #33014a;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  position: absolute;
+  text-wrap: balance;
+  right: 30px;
+  bottom: 30px;
+  float: right;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.register-btn:hover {
+  background: #a25deb;
+  color: #fff;
+}
+.register-btn:active {
+  transform: translateY(-10px);
+  font-size: 14px;
+  box-shadow: 0 4px 8px #a25deb;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background: #f0f0f0;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover .info {
+  background: #33014a;
+  opacity: 1;
+}
+
+.card:hover .info {
+  bottom: 5px;
+}
+
+/* Media query for smaller screens */
+
+@media (max-width: 480px) {
+  .main h1 {
+    font-size: 24px;
+    margin-top: 0;
+  }
+
+  nav {
+    width: auto;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+  }
+
+  .main h1 {
+    font-size: 20px;
+    text-wrap: wrap;
+  }
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  nav {
+    padding-top: 10px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+  }
+
+  nav .carmel-logo {
+    width: 140px;
+    margin-left: 0px;
+  }
+
+  nav .carmtif-logo {
+    width: 140px;
+  }
+
+  .bar {
+    height: 30px;
+    opacity: 80%;
+  }
+
+  .back-button {
+    display: none;
+  }
+
+  .main {
+    margin-top: 0px;
+    margin-right: 0;
+  }
+
+  .main h1 {
+    font-size: 18px;
+    text-wrap: balance;
+  }
+
+  .card-container {
+    width: 90%;
+    margin-top: -70px;
+  }
+  
+  .card-body {
+    justify-content: center;
+    display: flex;
+    margin: auto;
+  }
+
+
+
+  
+  
+
+  .row {
+    display: flex;
+    flex-direction: column;
+  }
+  .card {
+    width: 100%;
+    height: 300px;
+  }
+
+  .card:hover .gallery {
+    display: none;
+  }
+
+  .card-body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+  }
+
+  .gallery {
+    height: 100%;
+    width: 95%;
+  }
+
+  .content {
+    justify-content: center;
+    display: flex;
+    margin: auto;
+  }
+
+  .info {
+    width: 95%;
+  }
+
+  .register-btn {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    right: 1;
+    bottom: 1;
+  }
+
+  .register-btn:active {
+    transform: none;
+    font-size: 18px;
+    text-decoration: none;
+  }
+}
