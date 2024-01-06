@@ -7,7 +7,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    animation: slideshow 10s infinite;
+    animation: slideshow 7s infinite;
  
 }
 @keyframes slideshow {
