@@ -107,9 +107,15 @@ nav .carmel-logo {
   position: relative;
 }
 
+.content {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  h1{
+    color: #33014a;
 
-
-
+  }
+}
 
 
 .card-body {
@@ -144,7 +150,11 @@ nav .carmel-logo {
   justify-content: center;
   margin-left: 30px;
 }
-
+.content{
+  h1{
+    text-transform: uppercase;
+  }
+}
 .info {
   width: 60%;
   height: 90%;
@@ -162,13 +172,19 @@ nav .carmel-logo {
   opacity: 0;
 }
 
+.info h2{
+  color: #ffa902;
+  text-transform: capitalize;
+}
+
 ul {
   list-style: none;
   padding: 15px;
   margin: 0;
 }
 
-li {
+.info p {
+  flex-wrap: wrap;
   padding: 10px;
   margin-bottom: 8px;
   color: #fff;
@@ -327,10 +343,18 @@ li {
     display: flex;
     margin: auto;
   }
+  .content h1{
+    color:#33014a;
+  }
 
   .info {
     width: 95%;
   }
+ 
+  .info h2{
+    font-size: 18px;
+  }
+  
 
   .register-btn {
     width: 100px;
