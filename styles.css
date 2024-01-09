@@ -215,12 +215,12 @@ h2 {
 }
 #countdown1 p.d:before {
     content: "\00a0"; 
-    margin-right: 10px; 
+    margin-right: 15px; 
 }
 
 #countdown1 p.h:before {
     content: "\00a0"; 
-    margin-right: 90px; 
+    margin-right:  60px; 
 }
 
 #countdown1 p.m:before {
