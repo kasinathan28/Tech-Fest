@@ -2,12 +2,11 @@ body {
   margin: 0;
   justify-content: center;
   display: flex;
-  min-height: 100vh; /* Ensure that the content stretches to at least the full height of the viewport */
+  min-height: 100vh;
 }
 
 footer {
-
- background: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.9) );
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9));
   color: white;
   height: 400px;
   display: flex;
@@ -18,7 +17,7 @@ footer {
   position: fixed;
   width: 100%;
   bottom: 0;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5); /* Added a subtle box shadow */
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
 
 footer .logo1 {
@@ -44,22 +43,25 @@ footer .logo1 {
   margin-right: 10px;
 }
 
-
-
 .contact {
   display: flex;
+  width: auto;
   flex-direction: column;
   font-size: 14px;
   color: #fff;
   text-align: center;
   text-transform: uppercase;
   font-family: sans-serif;
+  padding-bottom: 60px;
 }
 
+#second-contact {
+  display: none;
+}
 
 .contact .child1 {
-  width: 700px;
-  max-width: 700px;
+  width: auto;
+  /* max-width: 700px; */
   height: 90px;
   justify-content: center;
   margin: auto;
@@ -102,69 +104,104 @@ a {
   font-size: 40px;
 }
 
-.socials .child0,.child2,.child3,.child4 {
-    transition: 0.3s ease all;
-  }
-  
-  .socials .child0:hover {
-    transform: translateY(-10px);
-    filter: drop-shadow(0 4px 4px#fff) /* Adjust the color and opacity as needed */
-  }
-  
-  .socials .child2:hover {
-    transform: translateY(-10px);
-    filter: drop-shadow(0 4px 4px#fff) /* Adjust the color and opacity as needed */
+.socials .child0,
+.child2,
+.child3,
+.child4 {
+  transition: 0.3s ease all;
+}
 
-  }
-  
-  .socials .child3:hover {
-    transform: translateY(-10px);
-    filter: drop-shadow(0 4px 4px#fff) /* Adjust the color and opacity as needed */
+.socials .child0:hover {
+  transform: translateY(-10px);
+  filter: drop-shadow(0 4px 4px#fff);
+}
 
-  }
-  
-  .socials .child4:hover {
-    transform: translateY(-10px);
-    filter: drop-shadow(0 4px 4px#fff) /* Adjust the color and opacity as needed */
-  }
+.socials .child2:hover {
+  transform: translateY(-10px);
+  filter: drop-shadow(0 4px 4px#fff);
+}
+
+.socials .child3:hover {
+  transform: translateY(-10px);
+  filter: drop-shadow(0 4px 4px#fff);
+}
+
+.socials .child4:hover {
+  transform: translateY(-10px);
+  filter: drop-shadow(0 4px 4px#fff);
+}
 
 .credits {
   width: auto;
   height: 40px;
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
   justify-content: center;
   display: flex;
   flex-direction: column;
   text-align: center;
   text-transform: uppercase;
+  padding: 10px;
 }
 
+
+
 @media screen and (max-width: 768px) {
-   footer{
+  footer {
     justify-content: center;
-   }
-   footer .logo1{
+  }
+  footer .logo1 {
     gap: 5px;
-   }
-   
-   .bar{
+  }
+
+  footer .logo1 img {
+    width: 100px;
+  }
+
+  .bar {
+    height: 50px;
     margin-left: 5px;
     margin-right: 5px;
-   }
-   .contact .child1{
-    gap: 10px;
-   }
-   .credits p{
-    font-size: 10px;
-   }
+  }
 
-   .socials i {
+  .contact {
+    width: auto;
+    display: flex;
+    padding-bottom: 1px;
+  }
+
+  .contact h1 {
+    font-size: 20px;
+  }
+
+  .contact .child1 {
+    gap: 10px;
+    width: auto;
+    height: auto;
+  }
+
+  #Mrs1 {
+    display: none;
+  }
+
+  #second-contact {
+    display: contents;
+  }
+  
+  .credits{
+    padding-top: 30px;
+  }
+  .credits p {
+    font-size: 10px;
+  }
+  .socials {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+  .socials i {
     font-size: 22px;
   }
-  .contact{
-
+  .contact {
     font-size: 12px;
   }
 }
-
-
