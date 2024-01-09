@@ -159,7 +159,11 @@ a {
    }
 
    .socials i {
-    font-size: 24px;
+    font-size: 22px;
+  }
+  .contact{
+
+    font-size: 12px;
   }
 }
 

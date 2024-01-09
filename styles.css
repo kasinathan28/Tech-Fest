@@ -165,7 +165,7 @@ h2 {
 .event-details {
     color: #ecf0f1;
     font-family: 'Karla', sans-serif;
-    font-weight: 350;
+    font-weight: 850;
     margin: 0 auto;
 }
 
@@ -211,7 +211,7 @@ h2 {
 #countdown1  p {
     margin: 0 -1px; 
     font-family: 'Karla', sans-serif;
-    font-weight: 50; 
+    font-weight: 550; 
     font-size: 12px;
     letter-spacing: 2px; 
 }
@@ -222,7 +222,7 @@ h2 {
 
 #countdown1 p.h:before {
     content: "\00a0"; 
-    margin-right:  60px; 
+    margin-right:  80px; 
 }
 
 #countdown1 p.m:before {
@@ -315,10 +315,14 @@ h2 {
 }
 
 .about p {
-    font-family: 'karla', sans-serif;
-    font-weight: 300; 
+    font-family: 'Karla', sans-serif;
+    font-weight: 500;
     color: #ddd5d5;
-    font-size: 12px; 
+    font-size: 15px;
+    text-align: justify;
+    margin: 0;
+    line-height: 130%;
+
 }
 
 
