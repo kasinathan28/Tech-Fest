@@ -1,5 +1,6 @@
 /* Scrollbar Track */
 ::-webkit-scrollbar {
+  transition: 0.3s ease all;
   width: 12px; /* width of the scrollbar */
 }
 
