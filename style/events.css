@@ -120,6 +120,13 @@ nav h1 {
   opacity: 1;
 }
 
+.card .card-body h1{
+  font-size: 28px;
+  font-weight: 500;
+  margin: auto;
+  transition: 0.3s ease;
+}
+
 .card-title {
   text-transform: uppercase;
   font-size: 28px;
@@ -170,11 +177,14 @@ nav h1 {
     justify-content: center;
     display: flex;
     margin: auto;
+    align-items: center;
   }
+
   .card .card-body{
     justify-content: center;
     align-items: center;
     display: flex;
+    margin: auto;
   }
 
   .card-sub-title {
@@ -188,18 +198,11 @@ nav h1 {
   }
 }
 
+
+
 /* Media query for smaller screens */
 @media (max-width: 768px) {
 
-  .card{
-    justify-content: center;
-    align-items: center; 
-  }
-
-  .card .card-body{
-    justify-content: center;
-    align-items: center;
-  }
 
   #main {
     display: none;
@@ -211,6 +214,7 @@ nav h1 {
     height: 180px;
   }
 }
+
 
 @media screen and (max-width: 768px) {
   body {
@@ -260,16 +264,10 @@ nav h1 {
     padding-bottom: 50px;
   }
 
+
   .card {
-    height: auto;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border: 0px;
-    margin: auto;
-    display: flex;
-    margin-right: 10px;
-    border: 2px #fff solid;
+    height: 100%;
+    width: 100%;
     transition: 0.3s ease all;
   }
 
@@ -286,20 +284,19 @@ nav h1 {
 
   .card .card-body {
     opacity: 1;
-    display: flex;
-    margin: auto;
     backdrop-filter: blur(0px);
     box-shadow: 0 4px 8px #000;
     justify-content: center;
     align-items: center; 
+    display: flex;
   }
 
 
-  .card-body H1 {
+  .card-body h1 {
     color: #fff;
-    align-items: flex-end;
-    position: absolute;
+    align-items: center;
     right: 0;
+    text-wrap: wrap;
     bottom: auto;
     margin-right: 20px;
     margin-top: 120px;
@@ -308,14 +305,17 @@ nav h1 {
     font-family: "Playfair Display", serif;
     font-style: italic;
   }
+
   .card-body p {
     /* color: #ffa902; */
+    margin-top: -30px;
+    font-size: 10px;
     align-items: flex-end;
-    position: absolute;
     bottom: 0;
+    justify-self: center;
     right: 0;
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 300;
     font-family: sans-serif;
   }
 }

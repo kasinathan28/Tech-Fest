@@ -1,3 +1,31 @@
+/* Scrollbar Track */
+::-webkit-scrollbar {
+  width: 12px; /* width of the scrollbar */
+}
+
+/* Handle on hover */
+/* Handle on hover with linear gradient */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #ffa902, #ff4500, #4caf50, #2196f3);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; /* color of the scrollbar handle */
+  border-radius: 6px; /* roundness of the scrollbar handle */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* color of the scrollbar track */
+}
+
+/* Corner */
+::-webkit-scrollbar-corner {
+  background: #fff; /* color of the scrollbar corner (if it's visible) */
+}
+
+
 body {
   margin: 0;
   justify-content: center;
@@ -65,7 +93,6 @@ nav .carmel-logo {
   width: 100%;
   text-wrap: balance;
   height: 200px;
-  /* margin: 130px auto; */
   color: #fff;
   justify-content: center;
   display: flex;
@@ -111,12 +138,10 @@ nav .carmel-logo {
   justify-content: center;
   align-items: center;
   display: flex;
-  h1{
+  h1 {
     color: #33014a;
-
   }
 }
-
 
 .card-body {
   width: 100%;
@@ -140,8 +165,8 @@ nav .carmel-logo {
 
 .gallery img {
   object-fit: cover;
-  width: 100%; /* Adjusted to make the image fill the container */
-  height: 100%; /* Adjusted to make the image fill the container */
+  width: 100%;
+  height: 100%;
 }
 
 .name {
@@ -150,11 +175,14 @@ nav .carmel-logo {
   justify-content: center;
   margin-left: 30px;
 }
-.content{
-  h1{
+
+
+.content {
+  h1 {
     text-transform: uppercase;
   }
 }
+
 .info {
   width: 60%;
   height: 90%;
@@ -170,15 +198,16 @@ nav .carmel-logo {
   position: absolute;
   transition: 0.3s ease;
   opacity: 0;
+  overflow-y: auto;
 }
 
-.info h2{
+.info h2 {
   color: #ffa902;
   text-transform: capitalize;
 }
 
-ul {
-  list-style: none;
+.rules ul {
+ 
   padding: 15px;
   margin: 0;
 }
@@ -203,12 +232,14 @@ ul {
   align-items: center;
   text-align: center;
   margin: auto;
-  position: absolute;
+  position: relative;
   text-wrap: balance;
   right: 30px;
   bottom: 30px;
   float: right;
   cursor: pointer;
+  margin-top: 20px;
+  margin-right: 0px;
   transition: 0.3s ease;
 }
 
@@ -216,6 +247,7 @@ ul {
   background: #a25deb;
   color: #fff;
 }
+
 .register-btn:active {
   transform: translateY(-10px);
   font-size: 14px;
@@ -223,21 +255,28 @@ ul {
 }
 
 .card:hover {
-  transform: scale(1.05);
+  /* transform: scale(1.05); */
   background: #f0f0f0;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
 }
 
 .card:hover .info {
   background: #33014a;
   opacity: 1;
-}
-
-.card:hover .info {
   bottom: 5px;
+  color: #fff;
+  transition: background 0.3s ease, opacity 0.3s ease, bottom 0.3s ease;
 }
 
-/* Media query for smaller screens */
+.card:hover .rules li {
+  padding: 5px;
+  transition: padding 0.3s ease;
+}
+
+
+
+
 
 @media (max-width: 480px) {
   .main h1 {
@@ -258,7 +297,7 @@ ul {
   }
 }
 
-/* Media query for smaller screens */
+
 @media screen and (max-width: 768px) {
   nav {
     padding-top: 10px;
@@ -300,22 +339,18 @@ ul {
     width: 90%;
     margin-top: -70px;
   }
-  
+
   .card-body {
     justify-content: center;
     display: flex;
     margin: auto;
   }
 
-
-
-  
-  
-
   .row {
     display: flex;
     flex-direction: column;
   }
+
   .card {
     width: 100%;
     height: 300px;
@@ -343,26 +378,25 @@ ul {
     display: flex;
     margin: auto;
   }
-  .content h1{
-    color:#33014a;
+  .content h1 {
+    color: #33014a;
   }
 
   .info {
     width: 95%;
   }
- 
-  .info h2{
+
+  .info h2 {
     font-size: 18px;
   }
-  
 
   .register-btn {
     width: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: auto;
-    right: 1;
+    margin: 30px auto 0 auto;
+    right: 0;
     bottom: 1;
   }
 
