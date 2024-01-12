@@ -208,10 +208,15 @@ nav .carmel-logo {
 }
 
 .rules ul {
- 
   padding: 15px;
   margin: 0;
 }
+
+.rules p {
+  word-spacing: 2px;
+  text-wrap: balance;
+}
+
 
 .info p {
   flex-wrap: wrap;
@@ -227,14 +232,14 @@ nav .carmel-logo {
   border: none;
   outline: none;
   height: 20px;
-  width: 20%;
+  width:auto;
   background-color: #fff;
   color: #33014a;
   align-items: center;
   text-align: center;
   margin: auto;
   position: relative;
-  text-wrap: balance;
+  text-wrap: wrap;
   right: 30px;
   bottom: 30px;
   float: right;
